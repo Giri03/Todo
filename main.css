@@ -1,3 +1,111 @@
-.container {
-    font-size: large;
+/* Keeping the whole container horizontally centric  */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: linear-gradient(to bottom right, #99edc3, white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* title of todo list */
+.task-list-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #5bb861;
+    margin-bottom: 15px;
+    color: white;
+    display: flex;
+    line-height: 21px;
+}
+
+.task-list-title-text {
+    padding-left: 0.3rem;
+    margin-right: auto;
+}
+
+/* shows pending task number */
+.task-count {
+    left: 0;
+    font-size: 12px;
+    color: rgb(248, 247, 247);
+}
+
+.tasks-container {
+    background-color: white;
+    padding: 1.25rem 0px;
+    width: 400px;
+    color: grey;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 14px;
+}
+
+.task-list {
+    padding-left: 0px;
+}
+
+.tasks-container .task-list .task {
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+}
+
+.list-name{
+    margin-right: auto;
+}
+
+/* when task is completed mark it checked */
+.task .completed {
+    text-decoration: line-through;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    width: 400px;
+    padding: 0.5rem 1rem;
+}
+
+.add-task-input {
+    border: none;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 14px;
+    width: 80%;
+}
+
+.add-task-input:focus {
+    outline: none;
+}
+
+.primary {
+    color: #5bb861;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+/* input placeholder style */
+::placeholder {
+    color: rgb(197, 197, 197);
+}
+  
+[data-checkcircle] {
+    padding-top: 3px;
+    padding-right: 0.75rem;
+    cursor: pointer;
+}
+
+[data-cross] {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+[data-bars] {
+    padding-top: 2px;
+    padding-right: 0.3rem;
 }
